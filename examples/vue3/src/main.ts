@@ -7,6 +7,8 @@ import { quirksPlugin } from '@quirks/vue';
 const app = createApp(App);
 
 import { osmosis, osmosisAssetList } from '@nabla-studio/chain-registry';
+import { cosmoshub, cosmoshubAssetList } from '@nabla-studio/chain-registry'
+
 import type { Config } from '@quirks/store';
 import {
   cosmostationMobile,
@@ -28,8 +30,8 @@ const config: Config = {
     okxExtension,
     cosmostationMobile,
   ],
-  chains: [osmosis],
-  assetsLists: [osmosisAssetList],
+  chains: [osmosis, cosmoshub],
+  assetsLists: [osmosisAssetList, cosmoshubAssetList],
   walletConnectOptions: {
     providerOpts: {
       logger: 'info',
